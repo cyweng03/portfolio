@@ -16,6 +16,25 @@
       ]
     },
     {
+      "name": "Data Analytics Platform",
+      "logo": "",
+      "time": "March 2026 - Present",
+      "type": "Part-Time",
+      "desription": "Developed an AI-powered analytics platform for a commercial equipment financing startup that lets internal teams ask natural language questions about transaction data and receive instant, data-backed answers. Designed the full system architecture, built the OpenAI integration and natural language context pipeline, and led a team of 4 developers to implement the end-to-end solution using Python, FastAPI, Supabase, and React.",
+      "link": "",
+      "tools": [
+        "Python",
+        "FastAPI",
+        "OpenAI API",
+        "Supabase",
+        "PostgreSQL",
+        "React",
+        "Recharts",
+        "Tailwind CSS",
+        "pandas"
+      ]
+    },
+    {
       "name": "SmartPantry",
       "logo": "",
       "time": "October 2023",
@@ -27,6 +46,19 @@
         "React-Native",
         "Appwrite",
         "TypeScript"
+      ]
+    },
+    {
+      "name": "InteliEQ Website Redesign",
+      "logo": "",
+      "time": "December 2025 - March 2026",
+      "type": "Part-Time",
+      "description": "Redesigned the marketing website for InteliEQ, a cleantech startup at the intersection of indoor air quality, human health, and energy intelligence. Built a modern, multi-page responsive site using Next.js to better communicate the company's mission and showcase their technology to decision-makers in healthcare and commercial environments.",
+      "link": "https://github.com/cyweng03/InteliEQ",
+      "tools": [
+        "Next.js",
+        "React",
+        "Tailwind CSS"
       ]
     },
     {
