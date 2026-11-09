@@ -5,14 +5,23 @@
       "logo": "",
       "time": "August 2026 - Present",
       "type": "Software Engineer",
-      "desription": "Designed and developed an identity verification backend for onboarding workflows serving 250K+ users monthly, collaborating with vendor engineers and Compliance on multi-stage verification logic. Validated the integration through shadow runs, Snowflake analysis, and A/B testing. Resolved an onboarding issue affecting approximately 3,700 users, enabling additional identity checks and reducing manual review time. Halved operator time for internal credit-reporting uploads through asynchronous, concurrent Sidekiq processing and clearer upload status in the UI. Built an NFC-enabled office-navigation platform with interactive maps and meeting-room search, partnering with Infrastructure and Information Security to enable access without a corporate VPN.",
+      "desription": "Building a new vendor integration for identity-verification onboarding workflows serving more than 250,000 users each month to reduce operating costs and enable an expected $5M in annual recurring revenue. Collaborating with vendor engineers, Compliance, and Product Ops on verification requirements and the customer experience. Alongside the integration, took ownership of issues uncovered in the codebase: resolved an onboarding bug affecting approximately 3,700 users and halved operator time for credit-reporting uploads through asynchronous, concurrent Sidekiq processing and clearer status displays.",
       "link": "",
       "tools": [
         "Sidekiq",
         "Snowflake",
         "A/B Testing",
         "NFC"
-      ]
+      ],
+      "caseStudy": {
+        "title": "Scaling identity verification, reducing operational friction",
+        "focus": "Backend ownership & collaboration",
+        "problem": "Reduce operating costs for identity-verification onboarding workflows serving more than 250,000 users each month, while maintaining a smooth customer experience and appropriate risk checks. The new identity-verification vendor integration is expected to enable $5M in annual recurring revenue.",
+        "contribution": "My primary focus is building the new vendor integration into the identity-verification backend. As I worked through the codebase, I also took ownership of issues I uncovered: finding and resolving an onboarding bug affecting approximately 3,700 users, and redesigning credit-reporting upload processing and status displays.",
+        "decision": "For the vendor integration, worked with vendor engineers and Compliance on multi-stage verification requirements, using shadow runs, Snowflake analysis, and A/B testing to validate the integration before broader rollout. For credit-reporting uploads, moved post-upload processing to asynchronous, concurrent Sidekiq jobs and made status and results clear in the UI.",
+        "result": "The vendor integration targets lower operating costs and an expected $5M in annual recurring revenue. Separately, the onboarding bug fix enabled affected applicants to complete additional identity checks, and the credit-reporting redesign halved operator time spent on uploads.",
+        "collaboration": "Worked with external vendor engineers on integration requirements and with Compliance on multi-stage verification logic. Partnered with Product Ops on the customer experience."
+      }
     },
     {
       "name": "ScholarSAT",
@@ -26,21 +35,35 @@
         "TypeScript",
         "Firestore",
         "Firebase Auth"
-      ]
+      ],
+      "summary": "Student score tracking, parent progress views, and role-based administration for a tutoring-center client."
     },
     {
       "name": "QuickFi",
       "logo": "",
       "time": "April - May 2026",
       "type": "Freelance Software Developer",
-      "desription": "Reduced transaction bottleneck detection time by 80% by replacing manual data analysis with a natural-language query interface for cycle-time insights and performance outliers. Designed an OpenAI API integration with tiered context injection, grounding responses in precomputed transaction metrics. Built a Python ETL pipeline using pandas to process 1K+ transactions, computing stage durations, aggregations, and IQR-based outlier detection across lender and dealer scopes.",
+      "desription": "Built an analytics platform for commercial equipment financing using React, FastAPI, and Supabase. A Python/pandas ETL pipeline processes CSV transaction logs into stage-duration statistics, monthly counts, and per-stage lender outlier flags. An OpenAI tool-calling agent resolves lender/dealer scope and retrieves metrics through predefined read-only query functions, returning plain-language answers, tables, and charts. Reduced transaction bottleneck detection time by 80% across a project analyzing 1K+ transactions.",
       "link": "",
       "tools": [
+        "React",
+        "FastAPI",
         "Python",
         "pandas",
-        "OpenAI API",
-        "ETL"
-      ]
+        "NumPy",
+        "Supabase / PostgreSQL",
+        "OpenAI function calling",
+        "Recharts"
+      ],
+      "caseStudy": {
+        "title": "Turning financing workflows into answers",
+        "focus": "Full-stack analytics & AI tool use",
+        "problem": "Internal teams needed to understand where equipment-financing deals slowed down, from credit decisions and contract signing to vendor payment. Finding bottlenecks and comparing lenders or dealers required manual analysis of transaction logs.",
+        "contribution": "Built a React analytics interface and FastAPI backend with CSV ingestion, scope filters, dashboard KPIs, and conversational queries. Developed a Python/pandas ETL pipeline for 1K+ transactions, computing stage durations, summary statistics, monthly counts, and outlier flags in Supabase. Integrated an OpenAI agent that resolves lender/dealer names and calls predefined query tools to return answers, tables, or charts.",
+        "decision": "Separated ETL writes from the agent’s read-only query layer. Stage calculations and outlier detection run in Python before questions are asked; the model receives scope and entity context, then retrieves the relevant metrics through function calling. Outliers are evaluated per stage and lender using an IQR threshold, with at least four observations and nonzero IQR.",
+        "result": "Reduced transaction bottleneck detection time by 80%, helping teams investigate cycle times and performance outliers through plain-language questions.",
+        "collaboration": "Delivered a freelance tool that helped teams investigate financing workflows through questions in plain language."
+      }
     },
     {
       "name": "Data Validation System",
@@ -55,7 +78,16 @@
         "EventBridge",
         "AWS CDK",
         "Python"
-      ]
+      ],
+      "caseStudy": {
+        "title": "Catching data-quality issues earlier",
+        "focus": "Infrastructure & reliability",
+        "problem": "Production data workflows serving 1M+ customers needed stronger quality checks and earlier detection of invalid records.",
+        "contribution": "Built and deployed automated post-processing validation for 15K+ daily records using AWS Glue, Apache Spark, EventBridge, and CDK.",
+        "decision": "Made schema enforcement, null detection, and field-specific rules explicit in the validation layer, bringing errors to light earlier in the workflow.",
+        "result": "Reduced debugging time by 20%+ and data-quality on-call tickets by 25%, improving reliability for 3+ downstream teams.",
+        "collaboration": "Built validation that supported the reliability needs of multiple downstream teams."
+      }
     },
     {
       "name": "Industrial Technology Research Institute",
@@ -72,7 +104,8 @@
         "Llama3",
         "LangChain",
         "Streamlit"
-      ]
+      ],
+      "summary": "A local healthcare RAG pipeline with 30K+ vectors; document retrieval and re-ranking improved answer accuracy by 50%."
     },
     {
       "name": "SmartPantry",
@@ -86,7 +119,8 @@
         "React-Native",
         "Appwrite",
         "TypeScript"
-      ]
+      ],
+      "summary": "A hackathon mobile app for grocery tracking, expiration reminders, and recipe suggestions."
     },
     {
       "name": "InteliEQ Website Redesign",
@@ -99,7 +133,8 @@
         "React",
         "Tailwind CSS"
       ],
-      "desription": "Redesigned the marketing website for InteliEQ, a cleantech startup at the intersection of indoor air quality, human health, and energy intelligence. Built a modern, multi-page responsive site using Next.js to better communicate the company's mission and showcase their technology to decision-makers in healthcare and commercial environments."
+      "desription": "Redesigned the marketing website for InteliEQ, a cleantech startup at the intersection of indoor air quality, human health, and energy intelligence. Built a modern, multi-page responsive site using Next.js to better communicate the company's mission and showcase their technology to decision-makers in healthcare and commercial environments.",
+      "summary": "A responsive Next.js website communicating a cleantech startup’s technology and mission."
     },
     {
       "name": "RAG System with Local LLM",
@@ -114,7 +149,8 @@
         "Ollama",
         "FAISS",
         "Llama3"
-      ]
+      ],
+      "summary": "Local document retrieval and context-aware answers with FAISS, LangChain, and Llama3."
     },
     {
       "name": "AguaClara",
@@ -131,7 +167,8 @@
         "JSON",
         "Git",
         "Figma"
-      ]
+      ],
+      "summary": "A team website redesign that increased page views by 75%, plus a CMS for 60+ members."
     },
     {
       "name": "ConsenCity",
@@ -144,7 +181,8 @@
         "React",
         "Supabase",
         "TypeScript"
-      ]
+      ],
+      "summary": "An award-winning hackathon application making local policy information more accessible."
     },
     {
       "name": "Glimpse",
@@ -157,7 +195,8 @@
         "React",
         "React Native",
         "Supabase"
-      ]
+      ],
+      "summary": "A shared space for friend groups to collect monthly updates, photos, and memories."
     }
   ]
 }

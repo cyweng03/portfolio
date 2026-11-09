@@ -115,7 +115,7 @@ export const BackgroundGradientAnimation = ({
       <div className={cn("", className)}>{children}</div>
       <div
         className={cn(
-          "gradients-container absolute inset-0 h-full w-full blur-lg opacity-30 pointer-events-none",
+          "gradients-container absolute inset-0 h-full w-full blur-lg opacity-[0.15] pointer-events-none",
           isSafari ? "blur-2xl" : "[filter:url(#blurMe) blur(40px)]"
         )}
       >
