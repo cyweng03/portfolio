@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import me from "./img/me.jpg";
+import professionalPortrait from "./img/professional-portrait.jpg";
 import Project from "./components/Project";
 import { useRef } from "react";
 import { IconBook, IconBrandGithub, IconBrandLinkedin, IconCode, IconFileText, IconMail, IconSchool, IconBriefcase } from '@tabler/icons-react';
@@ -41,7 +42,7 @@ const Landing = () => {
       <div className="site-content">
         <section id="Home" className="overview-section">
           <aside className="profile-panel" aria-label="About Dora">
-            <img src={me} alt="Chu-Yin (Dora) Weng" className="profile-avatar" />
+            <img src={professionalPortrait} alt="Chu-Yin (Dora) Weng" className="profile-avatar" />
             <h1>Chu-Yin Weng</h1><p className="profile-handle">Dora · dorawengg</p>
             <p className="profile-bio">Full-stack engineer. I make complicated information feel intuitive.</p>
             <a className="profile-contact" href="mailto:cw749@cornell.edu">Let’s connect</a>
