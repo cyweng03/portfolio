@@ -8,7 +8,9 @@ const Sidebar = ({ sections }) => {
   useEffect(() => {
     const updateNavigation = () => {
       const hero = document.getElementById('Home');
-      setHeroVisible(Boolean(hero && hero.getBoundingClientRect().bottom > 0));
+      // Match the section scroll offset: a small remaining strip of the hero
+      // must not hide navigation after jumping to Experiences.
+      setHeroVisible(Boolean(hero && hero.getBoundingClientRect().bottom > 88));
       const currentSection = sections.find(({ id }) => {
         const element = document.getElementById(id);
         if (!element) return false;

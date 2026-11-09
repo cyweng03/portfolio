@@ -83,39 +83,39 @@ const Landing = () => {
       </div> */}
       <div className="site-content">
         <section id="Home">
-            <div className="relative h-screen">
-              {/* <Navbar className="relative z-50" /> */}
-              <div className="px-[10%] py-[10%] mt-[5%]">
-                <div className="flex flex-row items-end mb-[3%] relative z-50">
-                  <div className="text-5xl font-semibold font-sans">
-                    Hello, I'm <div className="text-7xl">Chu-Yin Weng</div>
-                  </div>
-                  <div className="ml-5 font-semibold text-3xl font-sans"> aka Dora</div>
+          <div className="relative h-screen">
+            {/* <Navbar className="relative z-50" /> */}
+            <div className="px-[10%] py-[10%] mt-[5%]">
+              <div className="flex flex-row items-end mb-[3%] relative z-50">
+                <div className="text-5xl font-semibold font-sans">
+                  Hello, I'm <div className="text-7xl">Chu-Yin Weng</div>
                 </div>
-                <TypewriterEffect words={words} className="font-semibold text-2xl mb-5 relative text-left z-50 font-sans" />
-                <div className="font-semibold text-2xl font-sans">
-                  Check out my projects below :)
-                </div>
+                <div className="ml-5 font-semibold text-3xl font-sans"> aka Dora</div>
+              </div>
+              <TypewriterEffect words={words} className="font-semibold text-2xl mb-5 relative text-left z-50 font-sans" />
+              <div className="font-semibold text-2xl font-sans">
+                Check out my projects below :)
+              </div>
 
-              </div>
-              <div onClick={scrollToSecondPortion} className='absolute bottom-24 inset-x-0 z-50 group flex flex-col space-y-4 items-center hover:cursor-pointer justify-center'>
-                <motion.div
-                  animate={{ y: ["0%", "-20%", "0%"] }}
-                  transition={{
-                    duration: 0.6,
-                    ease: "easeInOut",
-                    repeat: Infinity,
-                    repeatType: "loop"
-                  }}
-                >
-                  <IconChevronDown size={70} color='#202124' />
-                </motion.div>
-              </div>
             </div>
+            <div onClick={scrollToSecondPortion} className='absolute bottom-24 inset-x-0 z-50 group flex flex-col space-y-4 items-center hover:cursor-pointer justify-center'>
+              <motion.div
+                animate={{ y: ["0%", "-20%", "0%"] }}
+                transition={{
+                  duration: 0.6,
+                  ease: "easeInOut",
+                  repeat: Infinity,
+                  repeatType: "loop"
+                }}
+              >
+                <IconChevronDown size={70} color='#202124' />
+              </motion.div>
+            </div>
+          </div>
         </section>
         {/* <Navbar /> */}
-        <section id="Experiences" className="px-[15%] mt-20 scroll-mt-20">
-          <div ref={secondPortionRef} className="scroll-mt-20">
+        <section id="Experiences" ref={secondPortionRef} className="px-[15%] mt-20">
+          <div>
             <div className="space-y-10">
               <div className="text-3xl font-semibold justify-center">
                 Featured Work & Experiences
@@ -143,26 +143,23 @@ const Landing = () => {
 
         <section id="About" className="min-h-screen px-[15%] mt-20 pb-16">
           <div className="items-center">
-            <div className="py-[15%]">
-              <div className="flex flex-row items-center sm:flex-col-reverse">
-                <div className="flex flex-col mr-10 text-xl">
-                  <div className="text-3xl font-semibold mt-3 mb-2 sm:mb-1">
+            <div>
+              <div className="flex flex-row items-start gap-10 sm:flex-col">
+                <div className="flex flex-col min-w-0 flex-1 text-xl">
+                  <div className="text-3xl font-semibold mb-2 sm:mb-1">
                     Still here? More about me:
                   </div>
                   <p className="mt-5 mb-2 leading-relaxed">
-                    I’m a full-stack engineer who enjoys helping people understand complicated concepts and data by using technology to make information more intuitive and accessible. I graduated from Cornell University with a B.S. in Computer Science and a minor in Information Science, earning Cum Laude honors.
+                    I’m a full-stack engineer who enjoys helping people understand complicated concepts and data by making information more intuitive through technology. I graduated from Cornell University with a B.S. in Computer Science and a minor in Information Science.
                   </p>
                   <p className="mt-5 mb-2 leading-relaxed">
-                    At Kikoff, I build across the frontend and backend to create onboarding systems and internal tools that help people navigate financial services more easily. I collaborate with external vendors on integrations and work closely with Product Ops to understand customer needs and engineer the best possible experience for our customers. My experience spans data pipelines at AWS, healthcare-focused AI research, and freelance applications for education and financial analytics. Across these projects, I’m drawn to the connection between reliable systems and thoughtful user experiences.
+                    At Kikoff, I build onboarding systems and internal tools, collaborate with external vendors on integrations, and work closely with Product Ops to improve the customer experience. My experience also spans data pipelines at AWS, healthcare-focused AI research, and freelance applications for education and financial analytics.
                   </p>
                   <p className="mt-5 mb-2 leading-relaxed">
-                    I take pride in writing clean code and thinking carefully about the underlying problem to find the most effective solution. I’m confident in my ability to communicate clearly, collaborate across teams, and deliver results efficiently, while staying open to new perspectives and ways to improve.
+                    I take pride in writing clean code, understanding the underlying problem, and choosing solutions that address it effectively. I value clear communication, thoughtful collaboration, and delivering results efficiently while staying open to new perspectives.
                   </p>
                   <p className="mt-5 mb-2 leading-relaxed">
-                    Outside of work, you’ll find me exploring creative websites, experimenting with coffee recipes, and putting together monthly <a href="https://open.spotify.com/user/bz8bpaku8nlwtlnl2n4v3djh9?si=c8a0d409b5704a3b" className="font-bold underline text-[#1DB954]">Spotify</a> playlists.
-                  </p>
-                  <p className="mt-5 mb-6 leading-relaxed">
-                    Have something in mind? <a href="https://www.linkedin.com/in/chuyinweng/" className="font-bold underline text-[#1967D2]">Let’s connect!</a>
+                    Outside of work, I explore creative websites, experiment with coffee recipes, and put together monthly <a href="https://open.spotify.com/user/bz8bpaku8nlwtlnl2n4v3djh9?si=c8a0d409b5704a3b" className="font-bold underline text-[#1DB954]">Spotify</a> playlists. Have something in mind? <a href="https://www.linkedin.com/in/chuyinweng/" className="font-bold underline text-[#1967D2]">Let’s connect!</a>
                   </p>
                   <div className="flex flex-row items-center space-x-8 ">
                     <a
