@@ -4,16 +4,16 @@ import React from "react";
 import { useEffect, useRef, useState } from "react";
 
 export const BackgroundGradientAnimation = ({
-  gradientBackgroundStart = "rgb(6, 0, 38)",
-  gradientBackgroundEnd = "rgb(6, 0, 38)",
-  firstColor = "21, 162, 232",
-  secondColor = "126, 155, 201",
-  thirdColor = "255, 236, 176",
-  fourthColor = "182, 92, 255",
-  fifthColor = "255, 231, 187",
-  pointerColor = "140, 100, 255",
+  gradientBackgroundStart = "rgb(250, 249, 246)",
+  gradientBackgroundEnd = "rgb(250, 249, 246)",
+  firstColor = "66, 133, 244",
+  secondColor = "234, 67, 53",
+  thirdColor = "251, 188, 5",
+  fourthColor = "52, 168, 83",
+  fifthColor = "66, 133, 244",
+  pointerColor = "66, 133, 244",
   size = "80%",
-  blendingValue = "hard-light",
+  blendingValue = "multiply",
   children,
   className,
   interactive = true,
@@ -115,13 +115,13 @@ export const BackgroundGradientAnimation = ({
       <div className={cn("", className)}>{children}</div>
       <div
         className={cn(
-          "gradients-container h-full w-full blur-lg",
+          "gradients-container absolute inset-0 h-full w-full blur-lg opacity-30 pointer-events-none",
           isSafari ? "blur-2xl" : "[filter:url(#blurMe) blur(40px)]"
         )}
       >
         <div
           className={cn(
-            `absolute [background:radial-gradient(circle_at_center,_var(--first-color)_0,_var(--first-color)_50%)_no-repeat]`,
+            `absolute [background:radial-gradient(circle_at_center,_rgba(var(--first-color),_0.8)_0,_rgba(var(--first-color),_0)_50%)_no-repeat]`,
             `[mix-blend-mode:var(--blending-value)] w-[var(--size)] h-[var(--size)] top-[calc(50%-var(--size)/2)] left-[calc(50%-var(--size)/2)]`,
             `[transform-origin:center_center]`,
             `animate-first`,

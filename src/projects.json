@@ -1,37 +1,77 @@
 {
   "Projects": [
     {
+      "name": "Kikoff",
+      "logo": "",
+      "time": "August 2026 - Present",
+      "type": "Software Engineer",
+      "desription": "Designed and developed an identity verification backend for onboarding workflows serving 250K+ users monthly, collaborating with vendor engineers and Compliance on multi-stage verification logic. Validated the integration through shadow runs, Snowflake analysis, and A/B testing. Resolved an onboarding issue affecting approximately 3,700 users, enabling additional identity checks and reducing manual review time. Halved operator time for internal credit-reporting uploads through asynchronous, concurrent Sidekiq processing and clearer upload status in the UI. Built an NFC-enabled office-navigation platform with interactive maps and meeting-room search, partnering with Infrastructure and Information Security to enable access without a corporate VPN.",
+      "link": "",
+      "tools": [
+        "Sidekiq",
+        "Snowflake",
+        "A/B Testing",
+        "NFC"
+      ]
+    },
+    {
+      "name": "ScholarSAT",
+      "logo": "",
+      "time": "May - June 2026",
+      "type": "Freelance Software Developer",
+      "desription": "Developed a Next.js and TypeScript application for a tutoring-center client, supporting student score tracking, parent progress viewing, and administrative workflows with Firestore. Implemented role-based access with Firebase Auth and custom admin approval, alongside a question bank supporting manual entry and PDF/HTML ingestion.",
+      "link": "",
+      "tools": [
+        "Next.js",
+        "TypeScript",
+        "Firestore",
+        "Firebase Auth"
+      ]
+    },
+    {
+      "name": "QuickFi",
+      "logo": "",
+      "time": "April - May 2026",
+      "type": "Freelance Software Developer",
+      "desription": "Reduced transaction bottleneck detection time by 80% by replacing manual data analysis with a natural-language query interface for cycle-time insights and performance outliers. Designed an OpenAI API integration with tiered context injection, grounding responses in precomputed transaction metrics. Built a Python ETL pipeline using pandas to process 1K+ transactions, computing stage durations, aggregations, and IQR-based outlier detection across lender and dealer scopes.",
+      "link": "",
+      "tools": [
+        "Python",
+        "pandas",
+        "OpenAI API",
+        "ETL"
+      ]
+    },
+    {
       "name": "Data Validation System",
       "logo": "",
       "time": "May - August 2025",
       "type": "SDE Intern, Amazon Web Services",
-      "desription": "As an SDE Intern at Amazon Web Services, I designed and deployed a scalable post-processing validation system to improve data quality in production pipelines serving over 1M customers. Leveraging AWS Glue, Athena, S3, and CloudWatch, the system automated validation for 15K+ daily records, enforcing schema rules, detecting nulls, and applying field-specific checks. These improvements reduced debugging time by over 20% through early error detection and cut data quality–related on-call tickets by 25%, enhancing reliability for three downstream teams.",
+      "desription": "Built and deployed a scalable, automated post-processing validation system using AWS Glue with Apache Spark, EventBridge, and CDK, processing 15K+ daily records in production workflows serving 1M+ customers. Developed schema enforcement, null detection, and field-specific validation rules, reducing debugging time by 20%+ through early error detection. Reduced data quality-related on-call tickets by 25%, improving pipeline reliability for 3+ downstream teams.",
       "link": "",
       "tools": [
         "AWS Glue",
-        "Athena",
-        "S3",
-        "CloudWatch",
+        "Apache Spark",
+        "EventBridge",
+        "AWS CDK",
         "Python"
       ]
     },
     {
-      "name": "Data Analytics Platform",
+      "name": "Industrial Technology Research Institute",
       "logo": "",
-      "time": "March 2026 - Present",
-      "type": "Part-Time",
-      "desription": "Developed an AI-powered analytics platform for a commercial equipment financing startup that lets internal teams ask natural language questions about transaction data and receive instant, data-backed answers. Designed the full system architecture, built the OpenAI integration and natural language context pipeline, and led a team of 4 developers to implement the end-to-end solution using Python, FastAPI, Supabase, and React.",
+      "time": "June 2024 - August 2024",
+      "type": "R&D Intern",
+      "desription": "Built a local RAG chatbot pipeline using pdfplumber for PDF extraction, SentenceTransformer embeddings, a FAISS vector store of 30K+ vectors, Llama3, LangChain, and Streamlit. Crawled and preprocessed 900+ disease-related documents from web and PDF sources, integrating a document retriever and LLM re-ranker to improve answer accuracy by 50%. Evaluated chatbot accuracy using hospital-sourced workflows to improve reliability and contextual accuracy.",
       "link": "",
       "tools": [
         "Python",
-        "FastAPI",
-        "OpenAI API",
-        "Supabase",
-        "PostgreSQL",
-        "React",
-        "Recharts",
-        "Tailwind CSS",
-        "pandas"
+        "pdfplumber",
+        "SentenceTransformer",
+        "FAISS",
+        "Llama3",
+        "LangChain",
+        "Streamlit"
       ]
     },
     {
@@ -53,13 +93,13 @@
       "logo": "",
       "time": "December 2025 - March 2026",
       "type": "Part-Time",
-      "description": "Redesigned the marketing website for InteliEQ, a cleantech startup at the intersection of indoor air quality, human health, and energy intelligence. Built a modern, multi-page responsive site using Next.js to better communicate the company's mission and showcase their technology to decision-makers in healthcare and commercial environments.",
       "link": "https://github.com/cyweng03/InteliEQ",
       "tools": [
         "Next.js",
         "React",
         "Tailwind CSS"
-      ]
+      ],
+      "desription": "Redesigned the marketing website for InteliEQ, a cleantech startup at the intersection of indoor air quality, human health, and energy intelligence. Built a modern, multi-page responsive site using Next.js to better communicate the company's mission and showcase their technology to decision-makers in healthcare and commercial environments."
     },
     {
       "name": "RAG System with Local LLM",
@@ -67,22 +107,6 @@
       "type": "Personal Project",
       "desription": "Built a Retrieval-Augmented Generation (RAG) system that allows users to upload and analyze unlimited documents using a locally hosted LLM (Llama3). The system enables efficient document retrieval and context-aware chatbot responses, leveraging FAISS for vector storage and LangChain for seamless integration.",
       "link": "https://github.com/dorawengg/RAG-LLM",
-      "tools": [
-        "Python",
-        "Streamlit",
-        "LangChain",
-        "Ollama",
-        "FAISS",
-        "Llama3"
-      ]
-    },
-    {
-      "name": "Industrial Technology Research Institute",
-      "logo": "",
-      "time": "June 2024 - August 2024",
-      "type": "",
-      "desription": "During my internship at the Industrial Technology Research Institute, I independently developed a locally hosted nursing chatbot using Streamlit and a Retrieval-Augmented Generation (RAG) LLM model. I enhanced the chatbot's performance by processing and analyzing information from an online medical database. Additionally, I trained the RAG model on a remote Linux server to provide more accurate responses and conducted a scoping review of 16 articles focused on speech-to-text and LLM applications in healthcare, aiming to streamline medical documentation processes.",
-      "link": "",
       "tools": [
         "Python",
         "Streamlit",

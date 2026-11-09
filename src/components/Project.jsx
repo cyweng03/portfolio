@@ -16,7 +16,7 @@ const Project = ({ project, index }) => {
         }}
       >
         <div key={index} className="mb-10">
-          <div className="flex flex-row justify-between space-x-5 shadow-lg transition duration-300 hover:scale-[102%]">
+          <div className="flex flex-row justify-between space-x-5 transition duration-300 hover:scale-[102%]">
             <div>
               <div className="mb-10">
                 <div className="flex flex-row">

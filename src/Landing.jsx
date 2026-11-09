@@ -52,7 +52,7 @@ const Landing = () => {
     // },
     {
       text: "user-centered",
-      className: "text-[#75AAFB]",
+      className: "text-[#1967D2]",
     },
     {
       text: "solutions.",
@@ -72,15 +72,18 @@ const Landing = () => {
   ];
 
   return (
-    <>
-      <Sidebar sections={sections} className="sm:hidden md:hidden" />
+    <div className="relative isolate">
+      <BackgroundGradientAnimation
+        containerClassName="fixed inset-0 -z-10 pointer-events-none"
+        interactive={false}
+      />
+      <Sidebar sections={sections} />
       {/* <div>
         <Top />
       </div> */}
-      <div>
+      <div className="site-content">
         <section id="Home">
-          <BackgroundGradientAnimation>
-            <div className="h-screen">
+            <div className="relative h-screen">
               {/* <Navbar className="relative z-50" /> */}
               <div className="px-[10%] py-[10%] mt-[5%]">
                 <div className="flex flex-row items-end mb-[3%] relative z-50">
@@ -95,7 +98,7 @@ const Landing = () => {
                 </div>
 
               </div>
-              <div onClick={scrollToSecondPortion} className='relative z-50 group flex flex-col space-y-4 items-center hover:cursor-pointer justify-center mb-24'>
+              <div onClick={scrollToSecondPortion} className='absolute bottom-24 inset-x-0 z-50 group flex flex-col space-y-4 items-center hover:cursor-pointer justify-center'>
                 <motion.div
                   animate={{ y: ["0%", "-20%", "0%"] }}
                   transition={{
@@ -105,15 +108,14 @@ const Landing = () => {
                     repeatType: "loop"
                   }}
                 >
-                  <IconChevronDown size={70} color='#f9f9f9' />
+                  <IconChevronDown size={70} color='#202124' />
                 </motion.div>
               </div>
             </div>
-          </BackgroundGradientAnimation>
         </section>
         {/* <Navbar /> */}
-        <section id="Experiences" className="px-[15%] mt-20">
-          <div ref={secondPortionRef}>
+        <section id="Experiences" className="px-[15%] mt-20 scroll-mt-20">
+          <div ref={secondPortionRef} className="scroll-mt-20">
             <div className="space-y-10">
               <div className="text-3xl font-semibold justify-center">
                 Featured Work & Experiences
@@ -139,32 +141,29 @@ const Landing = () => {
 
         </section>
 
-        <section id="About" className="h-screen px-[15%] mt-20">
-          <div className="h-[94%] items-center">
+        <section id="About" className="min-h-screen px-[15%] mt-20 pb-16">
+          <div className="items-center">
             <div className="py-[15%]">
               <div className="flex flex-row items-center sm:flex-col-reverse">
                 <div className="flex flex-col mr-10 text-xl">
                   <div className="text-3xl font-semibold mt-3 mb-2 sm:mb-1">
                     Still here? More about me:
                   </div>
-                  <div className="mt-5 mb-2 sm:mb-1">
-                    I'm a senior at <span className="font-bold text-red-500">Cornell University</span> passionate about crafting <span className="font-bold">innovative software solutions</span>. I have  a strong interest in <span className="font-bold">human computer interactions</span>, specifically in web development and information presentation.
-                    {/* My academic and internship experiences focus on leveraging technology to solve real-world problems, from applying machine learning models to reduce nurse burnout to developing user-friendly web applications. */}
-                  </div>
-
-                  <div className="mt-5 mb-2 sm:mb-1">
-                    I enjoy collaborating with teams and am eager to continually expand my skillset. My goal is to create user-centered, impactful technology solutions that make information more accessible and intuitive. If you share this vision of using design and technology to create a positive impact,  {" "}<a
-                      href="https://www.linkedin.com/in/chuyinweng/"
-                      className="font-bold underline text-[#75AAFB]"
-                    >
-                      lets connect!
-                    </a>
-                  </div>
-                  <div className="mt-5 mb-2">
-                    Outside of academics, I explore creative websites, experiment with coffee recipes, and craft monthly <a href="https://open.spotify.com/user/bz8bpaku8nlwtlnl2n4v3djh9?si=c8a0d409b5704a3b"
-                      className="font-bold underline text-[#1DB954]">Spotify</a> playlists.
-
-                  </div>
+                  <p className="mt-5 mb-2 leading-relaxed">
+                    I’m a full-stack engineer who enjoys helping people understand complicated concepts and data by using technology to make information more intuitive and accessible. I graduated from Cornell University with a B.S. in Computer Science and a minor in Information Science, earning Cum Laude honors.
+                  </p>
+                  <p className="mt-5 mb-2 leading-relaxed">
+                    At Kikoff, I build across the frontend and backend to create onboarding systems and internal tools that help people navigate financial services more easily. I collaborate with external vendors on integrations and work closely with Product Ops to understand customer needs and engineer the best possible experience for our customers. My experience spans data pipelines at AWS, healthcare-focused AI research, and freelance applications for education and financial analytics. Across these projects, I’m drawn to the connection between reliable systems and thoughtful user experiences.
+                  </p>
+                  <p className="mt-5 mb-2 leading-relaxed">
+                    I take pride in writing clean code and thinking carefully about the underlying problem to find the most effective solution. I’m confident in my ability to communicate clearly, collaborate across teams, and deliver results efficiently, while staying open to new perspectives and ways to improve.
+                  </p>
+                  <p className="mt-5 mb-2 leading-relaxed">
+                    Outside of work, you’ll find me exploring creative websites, experimenting with coffee recipes, and putting together monthly <a href="https://open.spotify.com/user/bz8bpaku8nlwtlnl2n4v3djh9?si=c8a0d409b5704a3b" className="font-bold underline text-[#1DB954]">Spotify</a> playlists.
+                  </p>
+                  <p className="mt-5 mb-6 leading-relaxed">
+                    Have something in mind? <a href="https://www.linkedin.com/in/chuyinweng/" className="font-bold underline text-[#1967D2]">Let’s connect!</a>
+                  </p>
                   <div className="flex flex-row items-center space-x-8 ">
                     <a
                       href="https://github.com/dorawengg"
@@ -191,7 +190,7 @@ const Landing = () => {
         </section>
         {/* <Footer /> */}
       </div>
-    </>
+    </div>
   );
 };
 

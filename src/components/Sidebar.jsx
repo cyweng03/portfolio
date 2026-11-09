@@ -3,21 +3,28 @@ import React, { useEffect, useState } from 'react';
 const Sidebar = ({ sections }) => {
   const [activeSection, setActiveSection] = useState('');
 
-  const handleScroll = () => {
-    const currentSection = sections.find((section) => {
-      const element = document.getElementById(section.id);
-      const rect = element.getBoundingClientRect();
-      return rect.top <= 50 && rect.bottom >= 50;
-    });
-    setActiveSection(currentSection ? currentSection.id : '');
-  };
+  const [heroVisible, setHeroVisible] = useState(true);
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
+    const updateNavigation = () => {
+      const hero = document.getElementById('Home');
+      setHeroVisible(Boolean(hero && hero.getBoundingClientRect().bottom > 0));
+      const currentSection = sections.find(({ id }) => {
+        const element = document.getElementById(id);
+        if (!element) return false;
+        const rect = element.getBoundingClientRect();
+        return rect.top <= 88 && rect.bottom > 88;
+      });
+      setActiveSection(currentSection ? currentSection.id : '');
     };
-  }, []);
+    updateNavigation();
+    window.addEventListener('scroll', updateNavigation, { passive: true });
+    window.addEventListener('resize', updateNavigation);
+    return () => {
+      window.removeEventListener('scroll', updateNavigation);
+      window.removeEventListener('resize', updateNavigation);
+    };
+  }, [sections]);
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -25,25 +32,26 @@ const Sidebar = ({ sections }) => {
   };
 
   return (
-    <div className="fixed left-0 top-0 h-full w-[10%] flex flex-col justify-center space-y-5 sm:hidden">
+    <nav className={`site-navigation${heroVisible ? " site-navigation-hidden" : ""}`} aria-label="Main navigation">
       {sections.map((section) => (
         <button
           key={section.id}
           onClick={() => scrollToSection(section.id)}
-          className={`p-2 text-xl bg-transparent text-left ml-5 ${activeSection === section.id ? 'font-bold' : ''}`}
+          aria-current={activeSection === section.id ? 'location' : undefined}
+          className={activeSection === section.id ? 'font-bold' : ''}
         >
           {section.title}
         </button>
       ))}
       <a
-        href="https://drive.google.com/file/d/1eJ9LAC1utC95uls7Eo2URVREpn7aBJ6m/view?usp=sharing"
+        href="https://drive.google.com/file/d/1N-nLCJ2US0vGpmT-J0A6EImuss3SYZcA/view?usp=sharing"
         target="_blank"
         rel="noopener noreferrer"
-        className="p-2 text-xl bg-transparent text-left ml-5 mt-auto"
+        className="resume-link"
       >
         Resume
       </a>
-    </div>
+    </nav>
 
   );
 };
